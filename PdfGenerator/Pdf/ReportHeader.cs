@@ -8,7 +8,7 @@ public class ReportHeader
     public static void CreateHeader(Document doc,Student student)
     {
         // Add college logo
-        var logo = Image.GetInstance("D:\\Downloads\\Siemens-logo.png");
+        var logo = Image.GetInstance("D:\\Downloads\\logo.png");
         logo.ScaleToFit(80f, 80f);
         logo.Alignment = Image.ALIGN_LEFT;
 

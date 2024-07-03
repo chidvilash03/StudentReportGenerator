@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        string excelFilePath = "D:\\Downloads\\schoolManagement.xlsx";
+        string excelFilePath = "D:\\Downloads\\StudentManagement.xlsx";
         string outputDirectory = "C:\\Users\\chidv\\OneDrive\\Documents";
 
         IExcelReader excelReader = new ExcelReader();
