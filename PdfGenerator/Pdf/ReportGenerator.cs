@@ -4,7 +4,7 @@ using iTextSharp.text.pdf;
 
 public class ReportGenerator : IReportGenerator
 {
-    public void GenerateReport(Student student, string outputDirectory)
+    public void GenerateReport(Student student, string outputDirectory,string excelFilePath)
     {
         var fileName = Path.Combine(outputDirectory, $"{student.RollNumber}_Report.pdf");
         using (var fs = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.None))
@@ -16,6 +16,9 @@ public class ReportGenerator : IReportGenerator
 
             //Generate header for each report
             ReportHeader.CreateHeader(doc, student);
+
+            var tableGenerator = new TableGenerator();
+            tableGenerator.GenerateTable(doc, excelFilePath,student.RollNumber,student.Name);
 
             // Close the document
             doc.Close();

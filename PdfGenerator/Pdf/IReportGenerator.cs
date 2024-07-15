@@ -1,4 +1,4 @@
 ﻿public interface IReportGenerator
 {
-    void GenerateReport(Student student, string outputDirectory);
+    void GenerateReport(Student student, string outputDirectory,string excelFilePath);
 }

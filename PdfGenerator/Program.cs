@@ -14,7 +14,7 @@ class Program
         IEnumerable<Student> students = excelReader.ReadStudents(excelFilePath);
         foreach (var student in students)
         {
-            pdfGenerator.GenerateReport(student, outputDirectory);
+            pdfGenerator.GenerateReport(student, outputDirectory, excelFilePath);
         }
     }
 }
